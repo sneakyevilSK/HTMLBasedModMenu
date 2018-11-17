@@ -1,0 +1,138 @@
+<html>
+	<head>
+		<title> Mod Menu by sneakyevil </title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="animate.css">
+		<style>
+			@font-face {
+			font-family: signpainting;
+			src: url(signpainter.ttf);
+			}
+			
+			@font-face {
+			font-family: clicky;
+			src: url(def.ttf);
+			}
+		
+			#screen a {
+			text-decoration:  none;
+			color:  white;
+			font-family:  clicky;
+			font-size:  25px;
+			display: block;
+			width: auto;
+			padding: 0;
+			margin: 0;
+			}
+			
+			#screen a:hover {
+			text-decoration:  none;
+			background-color:  #5b5b5b;
+			color:  white;
+			text-shadow:  1px 1px black;
+			transition:  background-color .1s ease-in;
+			}
+			
+			#screen h1 {
+			font-family:  signpainting;
+			font-size: 40px;
+			background-color:  #a30000;
+			color:  white;
+			padding-left:  50px;
+			padding-right: 50px;
+			text-shadow:  1px 1px black;
+			}
+			
+			
+			video#video { 
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			z-index: -100;
+			transform: translateX(-50%) translateY(-50%);
+			background-size: cover; 
+			}
+			
+			body {
+			background-color: #000;
+			}
+			
+			#screen {
+			-webkit-touch-callout: none;
+    			-webkit-user-select: none;
+     			-khtml-user-select: none;
+       			-moz-user-select: none;
+        		-ms-user-select: none;
+            		user-select: none;
+			border: 3px solid #d10000;
+			position: absolute;
+			top: 48%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			-moz-opacity: 0.5;
+			-khtml-opacity: 0.5;
+			opacity: 0.75;
+			background-color: #000000;
+			height: 350px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="screen">
+			<center> 
+			<h1 class="animated flash"> pMenu by sneakyevil </h1>
+				<a id="option1" onclick="o1()"></a>
+				<a id="option2" onclick="o2()"></a>
+				<a id="option3" onclick="o3()"></a>
+				<a id="option4" onclick="o4()"></a>
+				<a id="option5" onclick="o5()"></a>
+				<a id="option6" onclick="o6()"></a>
+				<a id="option7" onclick="o7()"></a>
+				<a id="option8" onclick="o8()"></a>
+			 </center>
+			<br>
+		</div>
+		<script>
+		var choosen = 0;
+		document.getElementById("option1").innerHTML = "<a href='#'>Links</a>";
+		document.getElementById("option2").innerHTML = "<a href='#'>Shoutouts</a>";
+		function o1() {
+			if (choosen == 0) {
+				choosen = 1;
+				document.getElementById("option1").innerHTML = "<a href='https://steamcommunity.com/id/-sneakyevil' target='_blank'>Steam</a>";
+				document.getElementById("option2").innerHTML = "<a href='https://youtube.com/sneakyevil' target='_blank'>Youtube</a>";
+				document.getElementById("option3").innerHTML = "<a href='https://twitter.com/sneakyevil1' target='_blank'>Twitter</a>";
+				document.getElementById("option8").innerHTML = "<a href='#'>Back</a>";
+			}
+		}
+		function o2() {
+			if (choosen == 0) {
+				choosen = 2;
+				document.getElementById("option1").innerHTML = "1";
+				document.getElementById("option2").innerHTML = "2";
+				document.getElementById("option3").innerHTML = "3";
+				document.getElementById("option8").innerHTML = "<a href='#'>Back</a>";
+			}
+		}
+		function o8() {
+			if (choosen > 0) {
+				document.getElementById("option1").innerHTML = "<a href='#'>Links</a>";
+				document.getElementById("option2").innerHTML = "<a href='#'>Shoutouts</a>";
+				document.getElementById("option3").innerHTML = "";
+				document.getElementById("option4").innerHTML = "";
+				document.getElementById("option5").innerHTML = "";
+				document.getElementById("option6").innerHTML = "";
+				document.getElementById("option7").innerHTML = "";
+				document.getElementById("option8").innerHTML = "";
+				choosen = 0;
+			}
+		}
+		</script>
+	</body>
+</html>
+<!-- Credits: sneakyevil -->
