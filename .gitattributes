@@ -1,2 +1,2 @@
-*.html     diff=html
-*.js     diff=js
+public/semantic/* linguist-vendored=true
+src/bower_components/* linguist-vendored=true
