@@ -1,0 +1,2 @@
+*.html     diff=html
+*.js     diff=javscript
